@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/apiDeporte1' , [DeporteController::class, 'apiDeporte1'])->name('apiDeporte1');
+Route::post('/apiPais1' , [DeporteController::class, 'apiPais1'])->name('apiPais1');

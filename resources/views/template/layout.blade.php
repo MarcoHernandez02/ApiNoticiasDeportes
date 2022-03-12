@@ -6,7 +6,8 @@
 -->
 <html>
 	<head>
-		<title>DEPORTES NOTICIAS</title>
+		<title>NOTIDEPORTES.COM</title>
+		<link rel="icon" href="https://www.pngmart.com/files/5/World-PNG-Photos.png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/css/main.css" />
@@ -40,8 +41,8 @@
 										<li><a href="#">Veroeros feugiat</a></li>
 									</ul>
 								</li>
-								<li><a href="left-sidebar.html">Mundo</a></li>
-								<li><a href="right-sidebar.html">En México</a></li>
+								<li><a href="{{route('mundo')}}">Mundo</a></li>
+								<li><a href="{{route('pais')}}">En México</a></li>
 								<li><a href="{{route('inicio')}}">Deportes</a></li>
 							</ul>
 						</nav>
@@ -51,11 +52,22 @@
 
 			<section>
 				<header class="major">
-					<h2>LO ULTIMO EN DEPORTES</h2>
+					<h2>LO ULTIMO EN NOTICIAS</h2>
+				</header>
+			</section>
+
+			<section id="banner">
+				<header>
+					<h2>@yield('Encabezado')</h2>
+					<p>@yield('parrafo')</p>
 				</header>
 			</section>
 
         @yield('noticias')
+		
+		@yield('noticias1')
+
+		@yield('noticias2')
 
             <!-- Footer -->
 				<section id="footer">

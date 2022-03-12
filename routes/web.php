@@ -16,9 +16,9 @@ use Database\Seeders\deportesSeeder;
 */
 
 // -- Vistas
-//Route::get('/' , [DeporteController::class, 'index'])->name('inicio');
+Route::get('/' , [DeporteController::class, 'mostrarNoticias'])->name('inicio');
+Route::get('/pais' , [DeporteController::class, 'apiPais1'])->name('pais');
+Route::get('/mundo' , [DeporteController::class, 'apiMundo1'])->name('mundo');
 
-// -- Mostrar noticias
-Route::get('/index' , [DeporteController::class, 'mostrarNoticias'])->name('inicio');
 
 

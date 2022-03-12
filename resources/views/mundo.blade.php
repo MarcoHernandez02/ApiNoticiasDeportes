@@ -1,16 +1,16 @@
 @extends('template.layout')
 
-	@section('Encabezado')
-		<h2>NOTICIAS DE DEPORTES</h2>
+@section('Encabezado')
+		<h2>WORLD'S NEWS</h2>
 	@endsection
 
 	@section('parrafo')
-		<p>LO ÚLTIMO EN DEPORTES</p>
+		<p>WE KEEP YOU KNONWING ABOUT WHAT HAPPEN IN THE WORLD</p>
 	@endsection
 
-	@section('noticias')
+@section('noticias2')
 
-@foreach($deportes as $deporte)
+@foreach($values as $value)
 	
 <!-- Portfolio -->
 
@@ -21,12 +21,12 @@
 
 				<!-- Content -->
 					<article class="box post">
-						<a href="" class="image featured"><img src="{{$deporte['imagen']}}" alt=""></a>
+						<a href="" class="image featured"><img src="{{$value['urlToImage']}}" alt=""></a>
 							<header>
-								<h3>{{$deporte['titulo']}}</h3>
-								<p>{{$deporte['autor']}}</p>
+								<h3>{{$value['title']}}</h3>
+								<p>{{$value['author']}}</p>
 							</header>
-								<p>{{$deporte['contenido']}}</p>
+								<p>{{$value['description']}}</p>
 					</article>
 
 			</div>
@@ -38,4 +38,3 @@
 @endforeach					
 
 @endsection
-		
