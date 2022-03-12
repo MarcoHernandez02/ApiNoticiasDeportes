@@ -26,7 +26,8 @@ class DeporteController extends Controller
 
     public function apiDeporte1()
     {
-        $Deporte = Deporte::all();     
-        return response()->json(["estatus" => "ok", "Deporte" => "$Deporte"]);
+        $Deporte = Deporte::all();  
+           
+        return response()->json(["estatus" => "ok", "Deporte" => $Deporte]);
     }
 }
